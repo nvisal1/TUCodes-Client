@@ -7,7 +7,12 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, View} from 'react-native';
+import {
+  Platform,
+  StyleSheet,
+  View,
+  StatusBar,
+} from 'react-native';
 import Login from './auth/pages/Login';
 import Stats from './dashboard/pages/Stats';
 
@@ -21,10 +26,15 @@ const instructions = Platform.select({
 type Props = {};
 export default class App extends Component<Props> {
   render() {
-    return (
+    return(
+    <View>
+      <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "#00BCD4" />
       <View style={styles.container}>
-        <Stats />
+       
+       <Stats />
       </View>
+    </View>
+     
     );
   }
 }

@@ -13,7 +13,6 @@ export default class Stats extends Component {
     render() {
         return(
             <View style={styles.background}>
-                <Header />
                 <Content />
                 <Footer />
             </View>

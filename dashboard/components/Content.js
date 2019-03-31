@@ -31,13 +31,15 @@ export default class Content extends Component {
         return(
             <View style={styles.container}>
                 <User />
-                <ScrollView>
-                    {
-                        this.state.cards.map((index) => (
-                            <Card />
-                        ))
-                    }
-                </ScrollView>
+                <View style={{height: '80%'}} >
+                    <ScrollView>
+                        {
+                            this.state.cards.map((index) => (
+                                <Card />
+                            ))
+                        }
+                    </ScrollView>
+                </View>
             </View>
         );
     }
