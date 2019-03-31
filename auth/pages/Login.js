@@ -50,13 +50,29 @@ export default class Login extends Component {
 
     signIn = async () => {
         // Make request for token
-        const token = null;
-        if (!token) {
-            alert('Username or Password is wrong');
-        } else {
-            await AsyncStorage.setItem('token', token);
-            this.props.navigation.navigate('Stats');
-            
+        try {
+            let response = await fetch(
+              'http://localhost:4000/hippo', {
+                method: 'POST',
+                headers: {
+                  Accept: 'application/json',
+                  'Content-Type': 'application/json',
+                },
+                body: {
+                    query: "{Login(username: \"nvisal\", password: \"password\"){token}}",
+                },
+            });
+            let responseJson = await response.json();
+            const token = responseJson.data.Login.token;
+            alert(token);
+            if (!token) {
+                // alert('Username or Password is wrong');
+            } else {
+                await AsyncStorage.setItem('token', token);
+                this.props.navigation.navigate('Stats');
+            }
+        } catch (error) {
+            console.error(error);
         }
   
     }
