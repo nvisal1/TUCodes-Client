@@ -12,47 +12,23 @@ import {
   StyleSheet,
   View,
   StatusBar,
+  
 } from 'react-native';
+import {
+  createStackNavigator,
+  createAppContainer
+} from 'react-navigation';
 import Login from './auth/pages/Login';
 import Stats from './dashboard/pages/Stats';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+const MainNavigator = createStackNavigator({
+  Login: {screen: Login},
+  Stats: {screen: Stats},
+},
+{
+  initialRouteName: 'Login'
 });
 
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return(
-    <View>
-      <StatusBar barStyle = "dark-content" hidden = {false} backgroundColor = "#00BCD4" />
-      <View style={styles.container}>
-       
-       <Stats />
-      </View>
-    </View>
-     
-    );
-  }
-}
+const App = createAppContainer(MainNavigator);
 
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+export default App;

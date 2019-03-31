@@ -10,11 +10,12 @@ import {
 export default class FormButton extends Component {
     
     render() {
+        console.log(this.props);
         return(
             <View>
                 <TouchableOpacity
                     style={styles.loginScreenButton}
-                    // onPress={() => navigate('HomeScreen')}
+                    onPress={() => this.props.navigation.push('Stats')}
                     underlayColor='#fff'>
                     <Text style={styles.loginText}>Login</Text>
                 </TouchableOpacity>

@@ -10,13 +10,16 @@ import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 
 export default class Login extends Component {
+    static navigationOptions = {
+        title: 'Login',
+    };
     render() {
         return(
             <View style={styles.background}>
                 <AppTitle />
                 <FormInput />
                 <FormInput />
-                <FormButton />
+                <FormButton navigator={this.props.navigator}/>
             </View>
         );
     }

@@ -10,6 +10,9 @@ import Content from '../components/Content';
 import Header from '../components/Header';
 
 export default class Stats extends Component {
+    static navigationOptions = {
+        title: 'Stats',
+    };
     render() {
         return(
             <View style={styles.background}>
