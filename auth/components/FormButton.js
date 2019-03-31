@@ -27,20 +27,20 @@ const styles = StyleSheet.create({
     loginScreenButton:{
         marginRight:40,
         marginLeft:40,
-        marginTop:10,
         paddingTop:10,
         paddingBottom:10,
         backgroundColor:'#FFBB00',
         borderColor: '#fff',
         width: 100
     },
-      loginText:{
+    loginText:{
         color:'black',
         textAlign:'center',
         fontWeight: 'bold',
         paddingLeft : 10,
-        paddingRight : 10
-      }
+        paddingRight : 10,
+        fontSize: 18
+    }
   });
   
 

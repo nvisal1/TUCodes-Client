@@ -5,18 +5,17 @@ import {
     View,
     Text,
 } from 'react-native';
-import AppTitle from '../components/AppTitle';
-import FormInput from '../components/FormInput';
-import FormButton from '../components/FormButton';
+import Header from '../components/Header'
+import Card from '../components/Card'
 
-export default class Login extends Component {
+export default class Stats extends Component {
     render() {
         return(
             <View style={styles.background}>
-                <AppTitle />
-                <FormInput />
-                <FormInput />
-                <FormButton />
+                
+                    <Header />
+                    <Card />
+            
             </View>
         );
     }
@@ -29,8 +28,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         justifyContent: 'center',
         alignItems: 'center',
+        padding: 15
     },
 })
 
 
-AppRegistry.registerComponent(Login, () => Login)
+AppRegistry.registerComponent(Stats, () => Stats)

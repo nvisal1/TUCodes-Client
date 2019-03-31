@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, View} from 'react-native';
 import Login from './auth/pages/Login';
+import Stats from './dashboard/pages/Stats';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -22,7 +23,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Login />
+        <Stats />
       </View>
     );
   }

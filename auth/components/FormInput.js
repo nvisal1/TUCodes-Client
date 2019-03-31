@@ -18,12 +18,13 @@ export default class FormInput extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 20
+        marginBottom: 20
     },
     loginInput:{
-        height: 40,
+        height: 35,
         width: 200,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        padding: 10,
     }
   });
 
