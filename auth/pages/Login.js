@@ -19,7 +19,7 @@ export default class Login extends Component {
                 <AppTitle />
                 <FormInput />
                 <FormInput />
-                <FormButton navigator={this.props.navigator}/>
+                <FormButton navigation={this.props.navigation}/>
             </View>
         );
     }

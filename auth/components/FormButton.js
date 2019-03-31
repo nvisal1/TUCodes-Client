@@ -15,7 +15,7 @@ export default class FormButton extends Component {
             <View>
                 <TouchableOpacity
                     style={styles.loginScreenButton}
-                    onPress={() => this.props.navigation.push('Stats')}
+                    onPress={() => this.props.navigation.navigate('Stats')}
                     underlayColor='#fff'>
                     <Text style={styles.loginText}>Login</Text>
                 </TouchableOpacity>
