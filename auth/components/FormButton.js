@@ -23,8 +23,6 @@ export default class FormButton extends Component {
     }
 }
 
-
-
 const styles = StyleSheet.create({
     loginScreenButton:{
         marginRight:40,
@@ -37,11 +35,11 @@ const styles = StyleSheet.create({
         width: 100
     },
       loginText:{
-          color:'black',
-          textAlign:'center',
-          fontWeight: 'bold',
-          paddingLeft : 10,
-          paddingRight : 10
+        color:'black',
+        textAlign:'center',
+        fontWeight: 'bold',
+        paddingLeft : 10,
+        paddingRight : 10
       }
   });
   

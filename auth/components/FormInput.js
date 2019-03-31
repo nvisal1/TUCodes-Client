@@ -9,31 +9,22 @@ import {
 export default class FormInput extends Component {
     render() {
         return(
-            <View>
-                <TextInput style={styles.loginText} placeholder='username'></TextInput>
+            <View style={styles.container}>
+                <TextInput style={styles.loginInput} placeholder='username'></TextInput>
             </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    loginScreenButton:{
-        marginRight:40,
-        marginLeft:40,
-        marginTop:10,
-        paddingTop:10,
-        paddingBottom:10,
-        backgroundColor:'#FFBB00',
-        borderColor: '#fff',
-        width: 100
+    container: {
+        marginTop: 20
     },
-      loginText:{
-          color:'black',
-          textAlign:'center',
-          fontWeight: 'bold',
-          paddingLeft : 10,
-          paddingRight : 10
-      }
+    loginInput:{
+        height: 40,
+        width: 200,
+        backgroundColor: 'white'
+    }
   });
 
 AppRegistry.registerComponent(FormInput, () => FormInput)
