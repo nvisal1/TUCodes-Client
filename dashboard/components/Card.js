@@ -10,14 +10,14 @@ export default class Card extends Component {
     render() {
         return(
             <View style={styles.card}>
-               <Text style={styles.card__header}>DEXA Scan as of 3/10/2019</Text>
-               <View style = {styles.headerLine} />
-               <Text style={styles.card__text}>Total Bone Mass: </Text>
-               <Text style={styles.card__text}>Total Fat Mass: </Text>
-               <Text style={styles.card__text}>Total Lean Mass: </Text>
-               <Text style={styles.card__text}>Total Mass: </Text>
-               <Text style={styles.card__text}>Total Body Fat Percentage: </Text>
-               <TouchableOpacity
+                <Text style={styles.card__header}>DEXA Scan as of 3/10/2019</Text>
+                <View style = {styles.headerLine} />
+                <Text style={styles.card__text}>Total Bone Mass: </Text>
+                <Text style={styles.card__text}>Total Fat Mass: </Text>
+                <Text style={styles.card__text}>Total Lean Mass: </Text>
+                <Text style={styles.card__text}>Total Mass: </Text>
+                <Text style={styles.card__text}>Total Body Fat Percentage: </Text>
+                <TouchableOpacity
                     style={styles.card__button}
                     // onPress={() => navigate('HomeScreen')}
                     underlayColor='#fff'>
@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
     card: {
         width: '100%',
         backgroundColor: 'white',
-        paddingTop: 5
+        paddingTop: 5,
+        marginBottom: 10
         
     },
     headerLine:{

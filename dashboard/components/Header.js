@@ -1,25 +1,19 @@
 import React, {Component} from 'react';
 import {
     AppRegistry,
-    TextInput,
     StyleSheet,
     View,
-    Image,
     Text
 } from 'react-native';
+import User from './User';
+import Card from './Card';
 
 export default class Header extends Component {
     render() {
         return(
             <View style={styles.container}>
-                <Image
-                    style={styles.profileImage}
-                    source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}
-                />
-                <View style={styles.textContainer}>
-                    <Text style={styles.textContainer__text}>Hi, Doc!</Text>
-                    <Text style={styles.textContainer__text}>#75 Towson Football</Text>
-                </View>
+                <Text style={styles.container__text}>TIGER TRACS</Text>
+                <View style = {styles.headerLine} />
             </View>
         );
     }
@@ -27,26 +21,17 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 20,
-        flexDirection: 'row', justifyContent: 'flex-end'
+        
     },
-    profileImage:{
-        height: 70,
-        width: 70,
-        borderRadius: 50,
+    container__text: {
+        color: 'white'
     },
-    textContainer: {
-        marginLeft: 20,
-        marginRight: 20
+    headerLine:{
+        borderWidth: 1,
+        borderColor: '#FFBB00',
+        margin: 10,
     },
-    textContainer__text: {
-        color: 'white',
-        fontWeight: 'bold'
-    },
-    logoImage:{
-        height: 50,
-        width: 50,
-    },
-  });
+})
+
 
 AppRegistry.registerComponent(Header, () => Header)

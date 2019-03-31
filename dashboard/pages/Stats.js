@@ -5,18 +5,19 @@ import {
     View,
     Text,
 } from 'react-native';
-import Header from '../components/Header'
-import Card from '../components/Card'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
+import Content from '../components/Content';
+import Header from '../components/Header';
 
 export default class Stats extends Component {
     render() {
         return(
             <View style={styles.background}>
                 <Header />
-                <Card />
+                <Content />
                 <Footer />
             </View>
+            
         );
     }
 }
@@ -28,7 +29,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 15
     },
 })
 
