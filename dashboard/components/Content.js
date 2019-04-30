@@ -8,7 +8,7 @@ import {
 import User from './User';
 import Card from './Card';
 
-export default class Content extends Component {
+export default class Content extends React.Component {
 
     state = {
         cards: [
@@ -28,9 +28,13 @@ export default class Content extends Component {
      }
 
     render() {
+        console.log(this.props);
         return(
             <View style={styles.container}>
-                <User />
+                <User 
+                    user={this.props.user}
+                    navigation={this.props.navigation}
+                />
                 <View style={{height: '80%'}} >
                     <ScrollView>
                         {

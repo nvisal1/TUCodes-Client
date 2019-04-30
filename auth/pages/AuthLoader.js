@@ -7,6 +7,7 @@ import {
     StatusBar,
     AsyncStorage
 } from 'react-native';
+import { NavigationActions, StackActions } from 'react-navigation';
 
 export default class AuthLoader extends Component {
 
@@ -14,6 +15,10 @@ export default class AuthLoader extends Component {
         super(props);
         this._loadData();
     }
+
+    static navigationOptions = {
+        title: 'AuthLoader',
+    };
 
     render() {
         return(
@@ -26,7 +31,17 @@ export default class AuthLoader extends Component {
 
     _loadData = async () => {
         const token = await AsyncStorage.getItem('token');
-        this.props.navigation.navigate(token ? 'Stats' : 'Login');
+        this.resetNavigation(token ? 'Stats' : 'Login');
+    }
+
+    resetNavigation = async (targetRoute) => {
+        const resetAction = StackActions.reset({
+          index: 0,
+          actions: [
+            NavigationActions.navigate({ routeName: targetRoute }),
+          ],
+        });
+        this.props.navigation.dispatch(resetAction);
     }
 }
 

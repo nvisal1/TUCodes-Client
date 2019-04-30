@@ -8,6 +8,8 @@ import {
     AsyncStorage
 } from 'react-native';
 import AppTitle from '../components/AppTitle';
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
 import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
 
@@ -20,6 +22,7 @@ export default class Login extends Component {
             password: ''
         }
     }
+    
     static navigationOptions = {
         title: 'Login',
     };
@@ -58,18 +61,18 @@ export default class Login extends Component {
                   Accept: 'application/json',
                   'Content-Type': 'application/json',
                 },
-                body: {
-                    query: "{Login(username: \"nvisal\", password: \"password\"){token}}",
-                },
+                body: JSON.stringify({
+                    query: `query { Login (username:"${this.state.username}", password:"${this.state.password}") { token } }`
+                })
+                    
             });
             let responseJson = await response.json();
             const token = responseJson.data.Login.token;
-            alert(token);
             if (!token) {
-                // alert('Username or Password is wrong');
+                alert('Username or Password is wrong');
             } else {
                 await AsyncStorage.setItem('token', token);
-                this.props.navigation.navigate('Stats');
+                this.props.navigation.navigate('AuthLoader');
             }
         } catch (error) {
             console.error(error);
