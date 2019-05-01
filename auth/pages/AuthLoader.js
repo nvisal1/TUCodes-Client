@@ -24,7 +24,7 @@ export default class AuthLoader extends Component {
         return(
             <View>
                 <ActivityIndicator />
-                <StatusBar />
+                <StatusBar translucent backgroundColor="#FFBB00"/>
             </View>
         )
     }

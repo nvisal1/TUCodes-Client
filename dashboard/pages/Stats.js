@@ -15,6 +15,7 @@ export default class Stats extends Component {
         super(props);
         this.state = {
             user: null,
+            token: null,
         };
         this.decodeToken()
             .then(user => this.setState({user}))
@@ -35,9 +36,9 @@ export default class Stats extends Component {
                 <View style={styles.background}>
                     <Content 
                         user={this.state.user}
+                        token={this.state.token}
                         navigation={this.props.navigation}
                     />
-                    <Footer />
                 </View>
                 
             );
@@ -52,6 +53,7 @@ export default class Stats extends Component {
 
     decodeToken = async () => {
         const token = await AsyncStorage.getItem('token')
+        this.setState({token});
         const decoded = jwtDecode(token);
         return decoded.user;
     }
@@ -61,7 +63,7 @@ const styles = StyleSheet.create({
     background: {
         height: '100%',
         width: '100%',
-        backgroundColor: 'black',
+        backgroundColor: '#3C3C3C',
         justifyContent: 'center',
         alignItems: 'center',
     },
