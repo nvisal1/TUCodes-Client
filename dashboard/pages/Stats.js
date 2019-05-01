@@ -4,7 +4,8 @@ import {
     StyleSheet,
     View,
     Text,
-    AsyncStorage
+    AsyncStorage,
+    TouchableHighlight,
 } from 'react-native';
 import Footer from '../components/Footer';
 import Content from '../components/Content';
@@ -39,6 +40,7 @@ export default class Stats extends Component {
                         token={this.state.token}
                         navigation={this.props.navigation}
                     />
+                    <Footer navigation={this.props.navigation}></Footer>
                 </View>
                 
             );

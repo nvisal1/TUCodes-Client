@@ -41,7 +41,6 @@ export default class Content extends React.Component {
                     
             });
             let responseJson = await response.json();
-            console.log(responseJson)
             this.setState({bodyComposition: responseJson.data.BodyComposition})
         } catch (error) {
             console.error(error);
@@ -64,7 +63,6 @@ export default class Content extends React.Component {
                     
             });
             let responseJson = await response.json();
-            console.log(responseJson);
             this.setState({fms: responseJson.data.FMS})
         } catch (error) {
             console.error(error);
