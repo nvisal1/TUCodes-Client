@@ -55,7 +55,7 @@ export default class Login extends Component {
         // Make request for token
         try {
             let response = await fetch(
-              'http://localhost:4000/hippo', {
+              'https://tracs-service.azurewebsites.net/hippo', {
                 method: 'POST',
                 headers: {
                   Accept: 'application/json',

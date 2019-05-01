@@ -28,7 +28,7 @@ export default class Content extends React.Component {
     fetchRecentBodyComposition = async () => {
         try {
             let response = await fetch(
-              'http://localhost:4000/hippo', {
+              'https://tracs-service.azurewebsites.net/hippo', {
                 method: 'POST',
                 headers: {
                   Accept: 'application/json',
@@ -50,7 +50,7 @@ export default class Content extends React.Component {
     fetchRecentFms = async () => {
         try {
             let response = await fetch(
-              'http://localhost:4000/hippo', {
+              'https://tracs-service.azurewebsites.net/hippo', {
                 method: 'POST',
                 headers: {
                   Accept: 'application/json',
