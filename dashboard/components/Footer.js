@@ -15,7 +15,7 @@ export default class Footer extends Component {
                     <FontAwesome name='envelope' color="white" style={{ fontSize: 25 }} onPress={() => this.props.navigation.navigate('Survey')}/>
                 </TouchableHighlight>
                 <TouchableHighlight style={styles.bottomButtons}>
-                    <FontAwesome name='archive' color="white" style={{ fontSize: 25 }} onPress={() => this.props.navigation.navigate('AuthLoader')}/>
+                    <FontAwesome name='archive' color="white" style={{ fontSize: 25 }} onPress={() => this.props.navigation.navigate('Stats')}/>
                 </TouchableHighlight>
                 <TouchableHighlight style={styles.bottomButtons}>
                     <FontAwesome name='user' color="white" style={{ fontSize: 25 }} onPress={() => this.props.navigation.navigate('Profile')}/>

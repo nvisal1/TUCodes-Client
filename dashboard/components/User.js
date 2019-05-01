@@ -85,7 +85,7 @@ export default class User extends React.Component {
         return (
             'https://www.gravatar.com/avatar/' +
             md5(this.props.user.Email) +
-            '?s=200' +
+            '?s=150' +
             '?r=pg&d=' +
             defaultIcon
         );

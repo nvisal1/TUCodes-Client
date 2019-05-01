@@ -3,6 +3,7 @@ import {
     AppRegistry,
     StyleSheet,
     View,
+    Text
 } from 'react-native';
 import Footer from '../components/Footer';
 
@@ -18,20 +19,38 @@ export default class Profile extends Component {
 
     render() {
         return(
-            <View style={styles.container}>
-                <User></User>
+            <View style={styles.background}>
+                <View style={styles.container}>
+                    <Text style={styles.text}>Coming soon!</Text>
+                </View>
                 <Footer navigation={this.props.navigation}></Footer>
             </View>
+            
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
+    background: {
+        height: '100%',
         width: '100%',
-        padding: 30,
-        alignContent: "center"
+        backgroundColor: '#3C3C3C',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
+    container: {
+        textAlign: "center",
+        height:"100%",
+        alignItems:'center',
+        justifyContent: 'center',
+    },
+    text: {
+        color: 'white',
+        textAlign: 'center',
+        marginTop: 3,
+        fontSize: 20,
+        fontWeight: 'bold'
+    }
 })
 
 
