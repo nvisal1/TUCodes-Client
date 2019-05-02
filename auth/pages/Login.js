@@ -8,11 +8,7 @@ import {
     AsyncStorage
 } from 'react-native';
 import AppTitle from '../components/AppTitle';
-import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
-import FormInput from '../components/FormInput';
 import FormButton from '../components/FormButton';
-
 export default class Login extends Component {
 
     constructor(props) {

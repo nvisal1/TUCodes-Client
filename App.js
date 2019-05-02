@@ -6,9 +6,7 @@ import React from 'react';
 export default class App extends React.Component {
   render() {
     return (
-        <ApolloProvider client={ApolloClient}>
-          <HomeApp />
-        </ApolloProvider>
+        <HomeApp />
     );
   }
 }
