@@ -58,7 +58,7 @@ export default class User extends React.Component {
     fetchTeamName = async () => {
         try {
             let response = await fetch(
-              'http://localhost:4000/hippo', {
+              'https://tracs-service.azurewebsites.net/hippo', {
                 method: 'POST',
                 headers: {
                   Accept: 'application/json',
